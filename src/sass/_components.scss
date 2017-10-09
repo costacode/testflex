@@ -1,0 +1,45 @@
+$A: (360/16) * 1em;
+$B: (720/16) * 1em;
+
+body {
+    font-size: 16px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.5;
+}
+header {
+    background-color: gold;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #000;
+    margin-bottom: 10px;
+}
+#container {
+    text-align: center;
+}
+
+ul.list, ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.listime, ul li {
+    &:nth-of-type(odd) {background-color: #999;}
+    &:nth-of-type(even) {background-color: gold;}
+
+    width: 100%;
+
+    @media (min-width:$A){
+        width: 50%;
+    }
+
+    @media (min-width:$B){
+        width: 25%;
+    }
+}
+
+
